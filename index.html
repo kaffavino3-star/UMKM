@@ -1,108 +1,540 @@
-
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10100f">
+  <meta name="description" content="KEDAI LEZATTO - Risol mayo renyah dan creamy">
   <title>KEDAI LEZATTO - Risol Mayo</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-  <div class="logo">🥐 KEDAI LEZATTO</div>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#produk">Menu</a>
-    <a href="#keranjang">Keranjang</a>
-    <a href="#lokasi">Lokasi</a>
-  </nav>
-</header>
+  <header class="site-header">
+    <a class="brand" href="#home">
+      <span class="brand-mark">KL</span>
+      <span>KEDAI <b>LEZATTO</b></span>
+    </a>
 
-<section class="hero" id="home">
-  <div class="hero-content">
-    <h1>Risol Mayo Lezat, Renyah dan Bikin Nagih!</h1>
-    <p>
-      Nikmati risol mayo dengan kulit renyah
-      dan isian creamy yang lezat.
-      Cocok untuk camilan kapan saja!
-    </p>
-    <a href="#produk" class="btn">PESAN SEKARANG</a>
-  </div>
-</section>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="hamburger">
+      <span></span><span></span><span></span>
+    </label>
 
-<section id="produk">
-  <div class="section-title">
-    <h2>Menu Risol Mayo</h2>
-    <p>Pilih varian favoritmu!</p>
-  </div>
+    <nav class="main-nav">
+      <a href="#home">Beranda</a>
+      <a href="#produk">Menu</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#ulasan">Ulasan</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
 
-  <div class="products" id="productList"></div>
-</section>
+    <a class="header-cta" href="https://wa.me/6285894731982" target="_blank">
+      Pesan via WA ↗
+    </a>
+  </header>
 
-<section class="about">
-  <div class="section-title">
-    <h2>Tentang KEDAI LEZATTO</h2>
-  </div>
-  <p>
-    KEDAI LEZATTO hadir untuk memberikan
-    camilan lezat dengan rasa istimewa.
-    Kami menyediakan risol mayo yang renyah
-    di luar dan creamy di dalam.
-  </p>
-</section>
+  <main>
 
-<section id="keranjang">
-  <div class="section-title">
-    <h2>Keranjang Belanja 🛒</h2>
-    <p>Periksa pesanan sebelum checkout</p>
-  </div>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">✦ CAMILAN HANGAT, RASA ISTIMEWA</p>
 
-  <div class="cart">
-    <div id="cartItems">Keranjang masih kosong.</div>
+        <h1>
+          Renyah di luar,<br>
+          <em>lumer</em> di dalam.
+        </h1>
 
-    <h3 class="total">
-      Total: Rp <span id="total">0</span>
-    </h3>
+        <p class="hero-desc">
+          Nikmati risol mayo dengan kulit renyah
+          dan isian creamy yang lezat.
+          Teman santai yang selalu bikin ingin tambah lagi.
+        </p>
 
-    <button class="btn" onclick="checkout()">
-      PESAN VIA WHATSAPP
-    </button>
-  </div>
-</section>
+        <div class="hero-actions">
+          <a href="#produk" class="button button-primary">
+            Lihat Menu ↓
+          </a>
 
-<section class="location" id="lokasi">
-  <div class="section-title">
-    <h2>Lokasi KEDAI LEZATTO 📍</h2>
-  </div>
+          <a href="https://wa.me/6285894731982" class="text-link" target="_blank">
+            Hubungi Kami ↗
+          </a>
+        </div>
 
-  <p>Temukan lokasi jualan kami melalui Google Maps.</p>
+        <div class="hero-note">
+          <span class="note-stars">★★★★★</span>
+          <span>Dibuat dengan sepenuh hati</span>
+        </div>
+      </div>
 
-  <a
-    href="https://maps.app.goo.gl/HutLcPCkQNKerxkj9?g_st=ic"
-    target="_blank"
-    rel="noopener"
-    class="btn">
-    BUKA LOKASI GOOGLE MAPS
-  </a>
+      <div class="hero-visual reveal">
+        <div class="hero-photo">
+          <img src="pakpoh.jpeg"
+            alt="Risol dan camilan">
+        </div>
 
-  <p class="contact">
-    WhatsApp Pemesanan: <b>085894731982</b>
-  </p>
-</section>
+        <div class="photo-tag">✦ Fresh & Delicious</div>
+        <div class="hero-stamp">LEZAT<br>TO!</div>
+      </div>
 
-<footer>
-  <h2>🥐 KEDAI LEZATTO</h2>
-  <p>Renyah di Luar, Lumer di Dalam!</p>
-  <p>WhatsApp: 085894731982</p>
-  <a href="https://maps.app.goo.gl/HutLcPCkQNKerxkj9?g_st=ic"
-     target="_blank" rel="noopener">
-    Alamat / Google Maps
-  </a>
-  <p>© 2026 KEDAI LEZATTO</p>
-</footer>
+      <div class="hero-bottom">
+        <span>01 / KEDAI LEZATTO</span>
+        <span>RASA YANG BIKIN RINDU</span>
+      </div>
+    </section>
 
-<script src="script.js"></script>
+    <!-- MENU PRODUK -->
+    <section class="menu-section section-pad" id="produk">
+
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">PILIH FAVORITMU</p>
+          <h2>Menu <em>lezat</em> kami.</h2>
+        </div>
+
+        <p>
+          Setiap gigitan punya cerita.<br>
+          Pilih varian yang paling kamu suka.
+        </p>
+      </div>
+
+      <div class="product-grid">
+
+        <article class="product-card reveal">
+          <div class="product-image">
+            <img src="mbahkong (2).jpeg"
+              alt="Risol Mayo Original">
+          </div>
+          <div class="product-info">
+            <div>
+              <h3>Risol Mayo Original</h3>
+              <p>Gurih klasik, creamy di setiap gigitan.</p>
+            </div>
+            <strong>Rp3.000 <small>/ pcs</small></strong>
+          </div>
+          <a class="product-order"
+            href="https://wa.me/6285894731982?text=Halo%20saya%20ingin%20pesan%20Risol%20Mayo%20Original"
+            target="_blank">
+            Pesan Varian Ini ↗
+          </a>
+        </article>
+
+        <article class="product-card reveal">
+          <div class="product-image">
+            <img src="pakpoh ngantuk.jpeg"
+              alt="Risol Mayo Beef">
+          </div>
+          <div class="product-info">
+            <div>
+              <h3>Risol Mayo Beef</h3>
+              <p>Isian beef gurih dengan saus mayo.</p>
+            </div>
+            <strong>Rp4.000 <small>/ pcs</small></strong>
+          </div>
+          <a class="product-order"
+            href="https://wa.me/6285894731982?text=Halo%20saya%20ingin%20pesan%20Risol%20Mayo%20Beef" target="_blank">
+            Pesan Varian Ini ↗
+          </a>
+        </article>
+
+        <article class="product-card reveal">
+          <div class="product-image">
+            <img src="mbahkong.jpeg"
+              alt="Risol Mayo Cheese">
+          </div>
+          <div class="product-info">
+            <div>
+              <h3>Risol Mayo Cheese</h3>
+              <p>Perpaduan mayo dan keju creamy.</p>
+            </div>
+            <strong>Rp4.000 <small>/ pcs</small></strong>
+          </div>
+          <a class="product-order"
+            href="https://wa.me/6285894731982?text=Halo%20saya%20ingin%20pesan%20Risol%20Mayo%20Cheese" target="_blank">
+            Pesan Varian Ini ↗
+          </a>
+        </article>
+
+        <article class="product-card reveal">
+          <div class="product-image">
+            <img src="marcel.jpeg"
+              alt="Risol Mayo Mix">
+          </div>
+          <div class="product-info">
+            <div>
+              <h3>Risol Mayo Mix</h3>
+              <p>Campuran rasa favorit dalam satu gigitan.</p>
+            </div>
+            <strong>Rp5.000 <small>/ pcs</small></strong>
+          </div>
+          <a class="product-order"
+            href="https://wa.me/6285894731982?text=Halo%20saya%20ingin%20pesan%20Risol%20Mayo%20Mix" target="_blank">
+            Pesan Varian Ini ↗
+          </a>
+        </article>
+
+      </div>
+
+      <p class="menu-footnote">
+        *Harga per buah. Hubungi kami untuk konfirmasi ketersediaan.
+      </p>
+    </section>
+
+    <!-- TENTANG -->
+    <section class="about-section section-pad" id="tentang">
+
+      <div class="about-image reveal">
+        <img src="seto.jpeg"
+          alt="Hidangan lezat">
+      </div>
+
+      <div class="about-copy reveal">
+        <p class="eyebrow">CERITA KAMI</p>
+
+        <h2>
+          Sederhana dalam bentuk,<br>
+          <em>istimewa</em> dalam rasa.
+        </h2>
+
+        <p>
+          KEDAI LEZATTO hadir untuk memberikan
+          camilan lezat dengan rasa istimewa.
+          Kami menyediakan risol mayo yang renyah
+          di luar dan creamy di dalam.
+          Cocok menemani waktu santai bersama
+          orang tersayang.
+        </p>
+
+        <a href="#kontak" class="text-link">
+          Kenali Kami Lebih Dekat ↗
+        </a>
+      </div>
+    </section>
+
+    <!-- ULASAN PELANGGAN -->
+
+
+    <section class="testimonial-section section-pad" id="ulasan">
+
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">CUSTOMER REVIEWS</p>
+          <h2>Ulasan <em>Pelanggan.</em></h2>
+        </div>
+        <p>
+          Apa kata mereka tentang<br>
+          KEDAI LEZATTO?
+        </p>
+      </div>
+
+      <div class="review-summary">
+        <div class="rating-big">
+          <strong>5.0</strong>
+          <span>★★★★★</span>
+          <small>Rating pelanggan</small>
+        </div>
+
+        <div class="rating-description">
+          <h3>Terima kasih sudah mempercayai kami!</h3>
+          <p>
+            Setiap ulasan dan dukungan kamu sangat
+            berarti untuk KEDAI LEZATTO.
+          </p>
+        </div>
+      </div>
+
+      <div class="review-list">
+
+        <!-- ULASAN 1 -->
+        <article class="review-card">
+
+          <div class="review-user">
+            <img src="images/profil-1.jpg" alt="Foto profil pelanggan">
+
+            <div class="user-info">
+              <h3>Nama Pelanggan 1</h3>
+              <span>Pembeli</span>
+            </div>
+          </div>
+
+          <div class="review-rating">
+            <span>★★★★★</span>
+            <small>5.0</small>
+          </div>
+
+          <p class="review-date">
+            Varian: Risol Mayo Original |
+            12 November 2026
+          </p>
+
+          <p class="review-comment">
+            Risolnya enak banget, kulitnya renyah
+            dan isiannya creamy. Recommended!
+          </p>
+
+          <!-- TEMPAT FOTO ULASAN -->
+          <div class="review-photos">
+            <img src="images/ulasan-1-1.jpg" alt="Foto risol dari pelanggan">
+            <img src="images/ulasan-1-2.jpg" alt="Foto produk dari pelanggan">
+          </div>
+
+          <div class="review-bottom">
+            <span>♡ Membantu?</span>
+            <span>Ulasan pelanggan</span>
+          </div>
+
+        </article>
+
+        <!-- ULASAN 2 -->
+        <article class="review-card">
+
+          <div class="review-user">
+            <img src="images/profil-2.jpg" alt="Foto profil pelanggan">
+
+            <div class="user-info">
+              <h3>Nama Pelanggan 2</h3>
+              <span>Pembeli</span>
+            </div>
+          </div>
+
+          <div class="review-rating">
+            <span>★★★★★</span>
+            <small>5.0</small>
+          </div>
+
+          <p class="review-date">
+            Varian: Risol Mayo Beef |
+            13 November 2026
+          </p>
+
+          <p class="review-comment">
+            Rasanya enak, porsinya pas dan
+            cocok untuk camilan keluarga.
+          </p>
+
+          <!-- TEMPAT FOTO ULASAN -->
+          <div class="review-photos">
+            <img src="images/ulasan-2-1.jpg" alt="Foto risol beef dari pelanggan">
+          </div>
+
+          <div class="review-bottom">
+            <span>♡ Membantu?</span>
+            <span>Ulasan pelanggan</span>
+          </div>
+
+        </article>
+
+        <!-- ULASAN 3 -->
+        <article class="review-card">
+
+          <div class="review-user">
+            <img src="images/profil-3.jpg" alt="Foto profil pelanggan">
+
+            <div class="user-info">
+              <h3>Nama Pelanggan 3</h3>
+              <span>Pembeli</span>
+            </div>
+          </div>
+
+          <div class="review-rating">
+            <span>★★★★★</span>
+            <small>5.0</small>
+          </div>
+
+          <p class="review-date">
+            Varian: Risol Mayo Cheese |
+            13 November 2026
+          </p>
+
+          <p class="review-comment">
+            Kejunya terasa dan mayonya enak.
+            Bakal pesan lagi!
+          </p>
+
+          <!-- TEMPAT FOTO ULASAN -->
+          <div class="review-photos">
+            <img src="images/ulasan-3-1.jpg" alt="Foto risol cheese dari pelanggan">
+            <img src="images/ulasan-3-2.jpg" alt="Foto pesanan pelanggan">
+          </div>
+
+          <div class="review-bottom">
+            <span>♡ Membantu?</span>
+            <span>Ulasan pelanggan</span>
+          </div>
+
+        </article>
+
+      </div>
+
+      <p class="review-disclaimer">
+        *Ganti nama, tanggal, rating, komentar dan foto
+        dengan data pelanggan asli.
+      </p>
+
+    </section>
+
+
+    <!-- FORM KONTAK -->
+    <section class="contact-section section-pad" id="kontak">
+
+      <div class="contact-intro reveal">
+        <p class="eyebrow">ADA YANG INGIN DITANYAKAN?</p>
+
+        <h2>
+          Yuk, ngobrol<br>
+          <em>dengan kami.</em>
+        </h2>
+
+        <p>
+          Punya pertanyaan, ingin pesan, atau mau
+          memberi masukan? Hubungi kami melalui
+          WhatsApp.
+        </p>
+
+        <a class="contact-wa" href="https://wa.me/6285894731982" target="_blank">
+          WhatsApp 085894731982 ↗
+        </a>
+      </div>
+
+      <form class="contact-form reveal" action="https://wa.me/6285894731982" method="get" target="_blank">
+
+        <label for="nama">Nama Lengkap</label>
+        <input type="text" id="nama" name="text" placeholder="Masukkan nama kamu" required minlength="2">
+
+        <label for="hp">Nomor HP / WhatsApp</label>
+        <input type="tel" id="hp" name="phone" placeholder="Contoh: 08xxxxxxxxxx" required pattern="[0-9+() -]{8,18}"
+          title="Masukkan nomor HP yang valid">
+
+        <label for="pertanyaan">Pertanyaan atau Pesan</label>
+        <textarea id="pertanyaan" name="message" rows="4" placeholder="Tulis pertanyaan kamu..." required
+          minlength="5"></textarea>
+
+        <p class="form-hint">
+          Pastikan semua kolom sudah terisi.
+        </p>
+
+        <button class="button button-primary" type="submit">
+          Kirim Pesan ↗
+        </button>
+
+        <p class="form-success">
+          Terima kasih! Silakan lanjutkan pengiriman
+          pesan melalui WhatsApp.
+        </p>
+
+      </form>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+
+    <div class="footer-main">
+
+      <div class="footer-brand">
+        <a class="brand" href="#home">
+          <span class="brand-mark">KL</span>
+          <span>KEDAI <b>LEZATTO</b></span>
+        </a>
+
+        <p>
+          Renyah di luar, lumer di dalam.<br>
+          Camilan lezat untuk setiap suasana.
+        </p>
+
+        <div class="social-links">
+          <a href="https://www.instagram.com/" target="_blank">Instagram ↗</a>
+          <a href="https://www.facebook.com/" target="_blank">Facebook ↗</a>
+        </div>
+      </div>
+
+      <div class="footer-contact">
+        <h3>Hubungi Kami</h3>
+
+
+        <div class="whatsapp-box">
+
+          <div class="whatsapp-top">
+            <div class="whatsapp-icon">
+              <!-- IKON WHATSAPP -->
+              <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M20.52 3.48A11.85 11.85 0 0 0 12.08 0C5.5 0 .15 5.35.15 11.93c0 2.1.55 4.15 1.6 5.95L.05 24l6.27-1.64a11.9 11.9 0 0 0 5.76 1.47h.01c6.58 0 11.93-5.35 11.93-11.93 0-3.19-1.24-6.19-3.5-8.42ZM12.08 21.8a9.9 9.9 0 0 1-5.05-1.38l-.36-.21-3.72.97.99-3.63-.24-.37a9.87 9.87 0 1 1 8.38 4.62Zm5.42-7.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.48-1.75-1.65-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.48-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.5 1.7.64.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z" />
+              </svg>
+            </div>
+
+            <div>
+              <span class="wa-label">CUSTOMER SERVICE</span>
+              <h3>WhatsApp Kami</h3>
+            </div>
+          </div>
+
+          <p>
+            Ingin memesan risol mayo atau bertanya
+            tentang produk kami? Kami siap membantu!
+          </p>
+
+          <div class="wa-number">
+            <span>Nomor WhatsApp</span>
+            <strong>085894731982</strong>
+          </div>
+
+          <a href="https://wa.me/6285894731982" class="wa-button" target="_blank" rel="noopener">
+            <span>Chat Sekarang</span>
+            <span>↗</span>
+          </a>
+
+          <small class="wa-note">
+            <span class="online-dot"></span>
+            Hubungi kami langsung melalui WhatsApp
+          </small>
+
+        </div>
+
+
+        <p>
+          Pesanan dan pertanyaan<br>
+          <a href="#kontak">Formulir Kontak ↗</a>
+        </p>
+      </div>
+
+      <div class="footer-map">
+        <h3>Kunjungi Kami</h3>
+
+        <p>
+          Temukan lokasi KEDAI LEZATTO
+          melalui Google Maps.
+        </p>
+
+        <a class="map-link"
+          href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.774270860159!2d112.04435129999999!3d-8.12445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78e78c4c0c381f%3A0xeda7747da3061015!2sRisol%20Mayo%20Kedai%20LeZatto!5e0!3m2!1sid!2sid!4v1794576920492!5m2!1sid!2sid"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin" target="_blank">
+          Buka Google Maps ↗
+        </a>
+
+        <div class="map-frame">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.774270860159!2d112.04435129999999!3d-8.12445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78e78c4c0c381f%3A0xeda7747da3061015!2sRisol%20Mayo%20Kedai%20LeZatto!5e0!3m2!1sid!2sid!4v1794576920492!5m2!1sid!2sid"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 KEDAI LEZATTO. Hak cipta dilindungi.</span>
+      <a href="#home">Kembali ke Atas ↑</a>
+    </div>
+
+  </footer>
+
 </body>
+
 </html>
