@@ -112,7 +112,7 @@ function checkout() {
   }
 
   let pesan =
-    "Halo KEDAI LEZATTO, saya ingin memesan risol mayo:\n\n";
+    "Halo KEDAI LEZATTO, saya ingin memesan risol mayo: ";
 
   cart.forEach(item => {
     pesan += `- ${item.name}: ${item.qty} pcs = Rp ${rupiah(item.price * item.qty)}\n`;
