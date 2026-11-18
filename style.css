@@ -1049,7 +1049,7 @@ em {
 }
 
 .wa-label {
-  color: #8cbd85;
+  color: #89e06c;
   font-size: 9px;
   letter-spacing: 2px;
 }
@@ -1092,8 +1092,8 @@ em {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #25d366;
-  color: #102416;
+  background: #d1ddd5;
+  color: #2d884c;
   padding: 14px 17px;
   margin-top: 17px;
   border-radius: 7px;
