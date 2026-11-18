@@ -4,22 +4,22 @@ const nomorWA = "6285894731982";
 const products = [
   {
     name: "Risol Mayo Original",
-    price: 3000,
+    price: 3.500,
     image: "https://images.unsplash.com/photo-1601050690597-df0568f70950"
   },
   {
-    name: "Risol Mayo Beef",
-    price: 4000,
+    name: "Risol coklat",
+    price: 3.500,
     image: "https://images.unsplash.com/photo-1601050690597-df0568f70950"
   },
   {
-    name: "Risol Mayo Cheese",
-    price: 4000,
+    name: "Risol Matcha",
+    price: 3.500,
     image: "https://images.unsplash.com/photo-1601050690597-df0568f70950"
   },
   {
-    name: "Risol Mayo Mix",
-    price: 5000,
+    name: "cireng pedas",
+    price: 3.500,
     image: "https://images.unsplash.com/photo-1601050690597-df0568f70950"
   }
 ];
