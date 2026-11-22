@@ -1334,3 +1334,61 @@ em {
     height: 90px;
   }
 }
+
+
+/* =========================================
+   KEDAI LEZATTO — GOLDEN SMOKE BACKGROUND
+   Effect 6 | Medium desktop / Light mobile
+   ========================================= */
+
+.gold-smoke-bg {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 0;
+  pointer-events: none;
+  opacity: .58;
+  contain: strict;
+}
+
+/* Konten tetap berada di atas lapisan animasi. */
+body > header,
+body > main,
+body > footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* Lapisan section dibuat sedikit transparan agar asap terlihat di seluruh halaman. */
+.menu-section,
+.testimonial-section {
+  background: rgba(25, 25, 23, .88);
+}
+
+.about-section {
+  background: rgba(16, 16, 15, .88);
+}
+
+.contact-section {
+  background: rgba(25, 25, 23, .88);
+}
+
+.site-footer {
+  background: rgba(10, 10, 9, .91);
+}
+
+/* Kurangi beban efek di perangkat kecil. */
+@media (max-width: 680px) {
+  .gold-smoke-bg {
+    opacity: .38;
+  }
+}
+
+/* Hormati pengaturan aksesibilitas pengguna. */
+@media (prefers-reduced-motion: reduce) {
+  .gold-smoke-bg {
+    opacity: .2;
+  }
+}
